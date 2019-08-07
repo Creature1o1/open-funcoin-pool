@@ -1,18 +1,28 @@
-<!-- Fixed navbar -->
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand"><span class="logo-1">FUNC </span><span class="logo-2">Pool</span></a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        {{#active-li currentWhen='index'}}
+<div class="topbar-main">
+                <div class="container-fluid">
+
+                    <!-- Logo container-->
+                    <div class="logo">
+                        <!-- Text Logo -->
+                        <!--<a href="index.html" class="logo">-->
+                            <!--<span class="logo-small"><i class="mdi mdi-radar"></i></span>-->
+                            <!--<span class="logo-large"><i class="mdi mdi-radar"></i> Simple</span>-->
+                        <!--</a>-->
+                        <!-- Image Logo -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo_sm.png" alt="" height="26" class="logo-small">
+                            <img src="assets/images/logo.png" alt="" height="26" class="logo-large">
+                        </a>
+
+                    </div>
+                    <!-- End Logo container-->
+
+
+                    <div class="navbar-custom">
+                        <div id="navigation">
+                            <!-- Navigation Menu-->
+                            <ul class="navigation-menu">
+                                 {{#active-li currentWhen='index'}}
           {{#link-to 'index'}}
             <i class="fa fa-home"></i> Home
           {{/link-to}}
@@ -45,9 +55,28 @@
             <i class="fa fa-comments"></i> About <span class="badge alert-success">&#x2713;</span>
           {{/link-to}}
         {{/active-li}}
-      </ul>
-    </div>
-  </div>
-</div>
+                               
+
+                              
+                            </ul>
+                            <!-- End navigation menu -->
+                        </div> <!-- end #navigation -->
+                    </div> <!-- end navbar-custom -->
+
+
+                    <div class="menu-extras topbar-custom">
+
+                       
+                    </div>
+                    <!-- end menu-extras -->
+
+                    <div class="clearfix"></div>
+
+                </div> <!-- end container -->
+            </div>
+            <!-- end topbar-main -->
+
+<!-- Fixed navbar -->
+
 
 {{outlet}}
