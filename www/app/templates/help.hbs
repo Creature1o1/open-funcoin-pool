@@ -5,7 +5,21 @@
   <p>1. Mining software:</p>
 We recommend Claymore's Dual Ethereum AMD+NVIDIA GPU Miner. Download & configuration guide here: Claymore's on Bitcointalk<br>
   <p>2.Mining server:</p>
-Stratum: <pool class="funcoin io:8008"></pool>
-EtherProxy: <pool class="fuincoin io:8888"></pool>
+Stratum: pool.funcoin io:8008"<br>
+EtherProxy: pool.fuincoin io:8888"<br>
+<p>3. Configuration:</p>
+Command: EthDcrMiner64.exe -allcoins 1 -epool s2.solopool.org:8006 -ewal [ADDRESS] -epsw x -eworker [RIG_ID]
+
+[ADDRESS]
+This is your address Callisto for payouts. Generate one with local/web wallet, or mine directly to any exchange.
+
+Example: 0xf35074bbd0a9aee46f4ea137971feec024ab704e
+
+[RIG_ID]
+ID of your rig to distinguish it from your other rigs. Use English letters, numbers and symbols "_" and "-". Maximum 20 characters.
+
+Example: RIG01
+
+Example: EthDcrMiner64.exe -allcoins 1 -epool s2.solopool.org:8006 -ewal 0xf35074bbd0a9aee46f4ea137971feec024ab704e -epsw x -eworker RIG01
 </div>
 
