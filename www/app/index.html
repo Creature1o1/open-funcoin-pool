@@ -17,12 +17,15 @@
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 
         <script src="assets/js/modernizr.min.js"></script>
-    {{content-for "head"}}
 
- 
-    {{content-for "head-footer"}}
   </head>
   <body>
+    <header id="topnav">
+        {{content-for "head"}}
+
+ 
+        {{content-for "head-footer"}}
+    </header>
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
