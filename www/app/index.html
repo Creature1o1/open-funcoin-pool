@@ -1,65 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-        <title>SimpleAdmin - Responsive Admin Dashboard Template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="{{rootURL}}assets/images/favicon.ico">
-
-        <!-- App css -->
-        <link href="{{rootURL}}assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="{{rootURL}}assets/css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="{{rootURL}}assets/css/style.css" rel="stylesheet" type="text/css" />
-
-        <script src="{{rootURL}}assets/js/modernizr.min.js"></script>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Callisto Mining Pool</title>
+    <meta name="description" content="High profitability Callisto mining pool"/>
+    <meta name="keywords" content="callisto, pool, mining, cryptocurrency"/>
+    <script src="https://cdn.polyfill.io/v1/polyfill.min.js?features=Intl.~locale.en"></script>
+    {{content-for "head"}}
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/open-social-pool.css">
+    {{content-for "head-footer"}}
   </head>
   <body>
-      {{content-for "head"}}
-
- 
-      {{content-for "head-footer"}}
-      <div class="wrapper">
-        <div class="container-fluid">
-
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/open-social-pool.js"></script>
 
     {{content-for "body-footer"}}
-  
-     <!-- Footer -->
-     <footer class="footer">
-      <div class="container-fluid">
-          <div class="row">
-              <div class="col-12">
-                  <div class="pull-right hide-phone">
-                      Project Completed <strong class="text-custom">57%</strong>.
-                  </div>
-                  <div>
-                      <strong>Simple Admin</strong> - Copyright © 2017 - 2019
-                  </div>
 
-              </div>
-          </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; 2018 Callisto Network & Chainkorea Project |
+          Powered by <a href="https://github.com/chainkorea/open-callisto-pool" target="_blank">open-callisto-pool</a> |
+          <strong>Dev ETH/ETC/CLO:</strong>
+          <a href="https://cloexplorer.org/addr/0x34AE12692BD4567A27e3E86411b58Ea6954BA773" rel="nofollow" target="_blank">
+            0x34AE12692BD4567A27e3E86411b58Ea6954BA773
+          </a>
+        </p>
       </div>
-  </footer>
-  </div></div>
-  <!-- End Footer -->
-     <!-- jQuery  -->
-     <script src="{{rootURL}}assets/js/jquery.min.js"></script>
-     <script src="{{rootURL}}assets/js/popper.min.js"></script>
-     <script src="{{rootURL}}assets/js/bootstrap.min.js"></script>
-     <script src="{{rootURL}}assets/js/jquery.slimscroll.js"></script>
-
-     <!-- App js -->
-     <script src="{{rootURL}}assets/js/jquery.core.js"></script>
-     <script src="{{rootURL}}assets/js/jquery.app.js"></script>
+    </footer>
   </body>
 </html>

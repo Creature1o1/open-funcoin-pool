@@ -1,118 +1,43 @@
+<div class="container">
+  <div class="page-header">
+    <h1>How To Mine</h1>
+  </div>
+  <p class="lead">In order to mine on this pool you need to have an
+    <a href="https://github.com/ethereum/webthree-umbrella/releases" rel="nofollow" target="_blank">ethminer</a> installation
+    pointed to<br/><code>{{config.HttpHost}}:{{config.HttpPort}}/YOUR_ETH_ADDRESS/RIG_ID</code>
+  </p>
+  <dl class="dl-horizontal">
+    <dt>YOUR_ETH_ADDRESS</dt>
+    <dd>This is your address for payouts, generate one with geth, or mine directly to exchange like
+      <a href="http://poloniex.com" rel="nofollow" target="_blank">Poloniex</a>
+      or <a href="http://bittrex.com" rel="nofollow" target="_blank">Bittrex</a>.<br/>
+      <strong>Example:</strong> <code>0x34AE12692BD4567A27e3E86411b58Ea6954BA773</code>.
+    </dd>
+    <dt>RIG_ID</dt>
+    <dd>
+      ID of your farm to distinguish it from your other rig. If you have just one rig, feel free to omit this param.
+      This param must be short alphanumeric string with optional dashes and underscores.<br/>
+      <strong>Example:</strong> <code>rig-1</code>
+    </dd>
+  </dl>
+  <p>
+    <strong>Full example:</strong>
+    <code>ethminer -F {{config.HttpHost}}:{{config.HttpPort}}/0x34AE12692BD4567A27e3E86411b58Ea6954BA773/myfarm -G --farm-recheck 200</code>.<br/>
+    <span class="label label-info">Hint:</span> If you are compiling ethminer from latest source, please also use
+      extra <code>--disable-submit-hashrate</code> option.
+  </p>
 
+  <h4>Stratum Mining with Stratum Proxy for Ethereum</h4>
+  <p class="lead">Grab proxy from <a href="https://github.com/Atrides/eth-proxy" re="nofollow" target="_blank">eth-proxy GitHub repo</a>.</p>
+  <p class="lead">Edit <code>eth-proxy.conf</code> and specify our pool's <code>HOST: {{config.StratumHost}}</code>, <code>PORT: {{config.StratumPort}}</code> and your <code>WALLET</code>.</p>
 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h4 class="header-title m-t-0">FAQs</h4>
-                    </div>
-                </div> <!-- end row -->
+  <h4>Mining with Ether-Proxy</h4>
+  <p class="lead">Use stable release of <a href="https://github.com/sammy007/ether-proxy/releases" target="_blank">Ethereum Solo/Pool Mining Proxy</a>.</p>
 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="p-20">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="text-center">
-                                        <h4 class="font-600">Frequently Asked Questions</h4>
-                                        <p class="text-muted"> Nisi praesentium similique totam odio obcaecati, reprehenderit,
-                                            dignissimos rem temporibus ea inventore alias!<br/> Beatae animi nemo ea
-                                            tempora, temporibus laborum facilis ut!</p>
-
-                                        <button type="button" class="btn btn-success m-t-10">Email us your question</button>
-                                        <button type="button" class="btn btn-primary m-t-10">Send us a tweet</button>
-
-                                    </div>
-                                </div><!-- end col -->
-                            </div><!-- end row -->
-
-
-                            <div class="row m-t-30">
-                                <div class="col-md-5 offset-md-1">
-                                    <div class="p-20">
-                                        <!-- Question/Answer -->
-                                        <div class="m-b-30">
-                                            <h6 class="question font-14">What is Lorem Ipsum?</h6>
-                                            <p class="answer">Lorem Ipsum is simply dummy text of the printing
-                                                and typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s.</p>
-                                        </div>
-
-                                        <!-- Question/Answer -->
-
-                                        <div class="m-b-30">
-                                            <h6 class="question font-14">Why use Lorem Ipsum?</h6>
-                                            <p class="answer">Lorem ipsum dolor sit amet, in mea nonumes
-                                                dissentias dissentiunt, pro te solet oratio iriure. Cu sit
-                                                consetetur moderatius intellegam, ius decore accusamus te. Ne
-                                                primis suavitate disputando nam. Mutat convenirete.</p>
-                                        </div>
-
-                                        <!-- Question/Answer -->
-
-                                        <div class="m-b-30">
-                                            <h6 class="question font-14">How many variations exist?</h6>
-                                            <p class="answer">Lorem Ipsum is simply dummy text of the printing
-                                                and typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s.</p>
-                                        </div>
-
-                                        <!-- Question/Answer -->
-                                        <div class="m-b-30">
-                                            <h6 class="question font-14">What is Lorem Ipsum?</h6>
-                                            <p class="answer">Lorem Ipsum is simply dummy text of the printing
-                                                and typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s.</p>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <!--/col-md-5 -->
-
-                                <div class="col-md-5">
-
-                                    <div class="p-20">
-                                        <!-- Question/Answer -->
-                                        <div class="m-b-30">
-                                            <h6 class="question font-14">Is safe use Lorem Ipsum?</h6>
-                                            <p class="answer">Lorem Ipsum is simply dummy text of the printing
-                                                and typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s.</p>
-                                        </div>
-
-                                        <!-- Question/Answer -->
-
-                                        <div class="m-b-30">
-                                            <h6 class="question font-14">When can be used?</h6>
-                                            <p class="answer">Lorem ipsum dolor sit amet, in mea nonumes
-                                                dissentias dissentiunt, pro te solet oratio iriure. Cu sit
-                                                consetetur moderatius intellegam, ius decore accusamus te. Ne
-                                                primis suavitate disputando nam. Mutat convenirete.</p>
-                                        </div>
-
-                                        <!-- Question/Answer -->
-
-                                        <div class="m-b-30">
-                                            <h6 class="question font-14">License &amp; Copyright</h6>
-                                            <p class="answer">Lorem Ipsum is simply dummy text of the printing
-                                                and typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s.</p>
-                                        </div>
-
-                                        <!-- Question/Answer -->
-                                        <div class="m-b-30">
-                                            <h6 class="question font-14">Is safe use Lorem Ipsum?</h6>
-                                            <p class="answer">Lorem Ipsum is simply dummy text of the printing
-                                                and typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s.</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!--/col-md-5-->
-                            </div>
-                            <!-- end row -->
-
-                        </div>
-                    </div><!-- end col -->
-                </div>
-                <!-- end row -->
+  <h4>Advice</h4>
+  <p>CPU mining is not recommended.</p>
+  <h4>Terms of Service</h4>
+  <p>By using the pool you accept all possible risks related to experimental software usage.<br/>
+     Pool owner can't compensate any irreversible losses, but will do his best to prevent worst case.
+  </p>
+</div>
