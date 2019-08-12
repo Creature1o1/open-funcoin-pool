@@ -69,7 +69,18 @@
   --border-color: hsl(var(--cd-color-1-h), var(--cd-color-1-s), calc(var(--cd-color-1-l)*1.1));
   border-bottom: 1px solid var(--border-color);
 
-  &::before, &::after {
+  &::before, &::after { // plus icon on the right
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    display: inline-block;
+    height: 1px;
+    width: 10px;
+    background-color: lightness(var(--cd-color-1), 1.6);
+  }
+
+  &::after {
     transform: rotate(90deg);
   }
 
